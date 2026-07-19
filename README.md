@@ -9,7 +9,7 @@
 
 #Technology used
 
-Excel, Python, PHP, CSS, Javascript
+SQL, Python, PHP, CSS, Javascript
 
 #notes
 
