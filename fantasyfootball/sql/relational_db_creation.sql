@@ -1,0 +1,7 @@
+CREATE TABLE userinfo (userID INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50)  UNIQUE, password VARCHAR (255), createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, teamComplete VARCHAR(5) DEFAULT ‘False’)
+CREATE TABLE players (playerID INT PRIMARY KEY AUTO_INCREMENT, playerName VARCHAR(255), nation VARCHAR(80), position VARCHAR(80), price FLOAT, playerPoints INT NOT NULL DEFAULT 0)
+CREATE TABLE tempteam (playerID INT, userID INT)
+CREATE TABLE teamplayers (playerID INT, userID INT, starter VARCHAR(5) DEFAULT ‘False’)
+CREATE TABLE playerStats1 (playerName VARCHAR(255) PRIMARY KEY, goals INT, assists INT, cleanSheets INT, played INT, sixtyMins INT,  YCard INT, RCard INT)
+CREATE TABLE tempstats1 ( playerName VARCHAR(255), goals INT, assists INT, cleanSheets INT, played INT, sixtyMins INT, YCard INT, RCard INT)
+CREATE TABLE IF NOT EXISTS password_reset (ID INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), selector CHAR(16), token CHAR(64), expires BIGINT(20))
